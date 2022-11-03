@@ -27,6 +27,10 @@ body {
   color: var(--Pale-Blue);
 }
 
+.main-container {
+  width: 328px;
+  margin: 77px auto;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
