@@ -7,8 +7,8 @@
 }
 
 :root {
---Blue: hsl(246, 80%, 60%)
-
+--Blue: hsl(246, 80%, 60%);
+--White: #FFFFFF;
 --Light-red: hsl(15, 100%, 70%);
 --Soft-blue: hsl(195, 74%, 62%);
 --Light-red: hsl(348, 100%, 68%);
@@ -30,6 +30,54 @@ body {
 .main-container {
   width: 328px;
   margin: 77px auto;
+  position: relative;
+}
+
+.main-card__user {
+  background: var(--Blue);
+  display: flex;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.main-card__img {
+  width: 72px;
+  margin-right: 10px;
+  border: 3px solid var(--White);
+  border-radius: 50%;
+}
+
+.main-card__title {
+  font-size: 0.9em;
+  margin: 10px 0 4px;
+}
+
+.main-card__name {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--White);
+}
+
+.main-card__dates {
+  background: var(--Dark-blue);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 16px;
+  height: 100px;
+  padding-top: 52px;
+  font-size: 1.2em;
+  position: absolute;
+  width: 100%;
+  top: 105px;
+  z-index: -1;
+}
+
+.main-card__frequency {
+  color: var(--Pale-Blue);
+}
+
+.second-section {
+  margin-top: 90px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
