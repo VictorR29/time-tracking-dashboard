@@ -9,7 +9,7 @@
 :root {
 --Blue: hsl(246, 80%, 60%);
 --White: #FFFFFF;
---Light-red: hsl(15, 100%, 70%);
+--Light-orange: hsl(15, 100%, 70%);
 --Soft-blue: hsl(195, 74%, 62%);
 --Light-red: hsl(348, 100%, 68%);
 --Lime-green: hsl(145, 58%, 55%);
@@ -37,6 +37,9 @@ body {
   background: var(--Blue);
   display: flex;
   border-radius: 16px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
   padding: 30px;
 }
 
@@ -69,16 +72,76 @@ body {
   position: absolute;
   width: 100%;
   top: 105px;
-  z-index: -1;
 }
 
-.main-card__frequency {
-  color: var(--Pale-Blue);
+.main-card__frequency:hover {
+  cursor: pointer;
+  color: var(--White);
 }
 
 .second-section {
   margin-top: 90px;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.card__background {
+  background-color: var(--Light-orange);
+  height: 80px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+
+.card__img {
+  margin-top: -10px;
+  margin-left: 235px;
+}
+
+.card__details {
+  background-color: var(--Dark-blue);
+  display: flex;
+  flex-direction: column;
+  height: 122px;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 16px;
+  position: relative;
+  top: -40px;
+}
+
+.card__details:hover {
+  background-color: var(--Desaturated-blue);
+  cursor: pointer;
+}
+
+.card__activity, .card__hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__title {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--White);
+}
+
+.card__hour {
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--White);
+}
+
+.attribution { 
+  font-size: 16px; 
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--Desaturated-blue);
+}
